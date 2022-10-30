@@ -3,6 +3,11 @@ import string
 import os
 import disablerootlogin.py as drl
 
+
+def updates():
+    os.system("sudo apt-get update")
+    os.system("sudo apt-get upgrade")
+
 def passwordchanger():
     filepath = "users.txt"
     with open(filepath) as fp:
@@ -29,11 +34,11 @@ def passwordgen():
 
     return password
 
-def passwdenforcer():
+def passwdenforcer(): 
     
     os.system("sudo apt-get install libpam-cracklib")
-    os.system("sudo gedit /etc/login.defs")
-    os.system("sudo gedit /etc/pam.d/common-password")
+    os.system("sudo gedit /etc/login.defs") # can be automated
+    os.system("sudo gedit /etc/pam.d/common-password") # cannot be automated
 
 def mp3finder():
     print("finding .mp3s")
@@ -64,5 +69,9 @@ if __name__ == '__main__':
     if run.lower() == 'y':
         mp3finder()
 
+    print("run updates? Y/N")
+    run = input()
+    if run.lower() == 'y':
+        updates()
 
     
