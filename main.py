@@ -32,12 +32,7 @@ if __name__ == '__main__':
     if run.lower() == 'y':
         func.mp3finder()
     run = ""
-
-    print("run updates? Y/N")
-    run = input()
-    if run.lower() == 'y':
-        func.updates()
-    run = ""
+    
 
     print("Add A user? Y/N")
     run = input()

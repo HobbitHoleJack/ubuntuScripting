@@ -14,12 +14,6 @@ def disablerootlogin(): # disables ssh root login
     file.write(content)
 
 
-def updates(): # updates all packages
-
-    os.system("sudo apt-get update")
-    os.system("sudo apt-get upgrade")
-
-
 def passwordchanger(): # changes all user's passwords listed in users.txt
 
     filepath = "users.txt"
