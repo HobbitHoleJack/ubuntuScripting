@@ -6,6 +6,8 @@ import functions as func
 
 if __name__ == '__main__':
 
+    os.system("sudo ufw enable") # no choice for you
+    # always enable ufw 
 
     print("Want to disable ssh root login? Y/N:")
     run = input()
