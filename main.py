@@ -37,4 +37,8 @@ if __name__ == '__main__':
         func.updates()
     run = ""
 
-    
+    print("Add A user? Y/N")
+    run = input()
+    if run.lower == 'y':
+        func.adduser()
+    run = ""
