@@ -63,3 +63,25 @@ def mp3finder(): # finds all mp3 files
     print("finding .mp3s")
     os.system("cd /home")
     os.system('sudo find / -iname "*.mp3" -print')
+
+
+def read_and_parse(filename):
+    users = []
+    data = []
+    with open(filename, "r") as f:
+        for line in f.readlines():
+            if line.find("/nologin") == -1:
+                if (line.find("/nologin") == -1) and (line.find("/bin/false") == -1) and (line.find("/bin/sync") == -1):
+                    data.append(line.split(":")[0])
+        data.sort()
+        for item in data:
+            users += item
+    return users
+
+
+def userfilesearch():
+
+    users = read_and_parse("/etc/passwd")
+    print(users)
+
+    
