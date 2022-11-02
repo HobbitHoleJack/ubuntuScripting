@@ -1,1 +1,1 @@
-the result of two (possibly three) really cool people who felt like automating simple things on ubuntu
+the result of three really cool people who felt like automating simple things on ubuntu
