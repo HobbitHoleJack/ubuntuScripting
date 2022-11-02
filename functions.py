@@ -1,3 +1,7 @@
+import random
+import string
+import os
+
 def disablerootlogin(): # disables ssh root login
 
   # Read file in read mode 'r'
