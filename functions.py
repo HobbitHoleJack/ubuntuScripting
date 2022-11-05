@@ -46,14 +46,9 @@ def passwordgen(): # password generator utility for the passwordchanger function
 
 def passwdenforcer(): # enforces password requirements
     
-    # replace '/etc/login.defs' file with already secured version
-    with open('login-defs-secure.txt', 'r') as filel:
-        sl = filel.read()
-    fl = open("/etc/login.defs", "r+")
-
-    fl.truncate(0)
-    fl.write(sl)
-    fl.close()
+    os.system("sudo apt-get install libpam-cracklib -y")
+    os.system("sudo gedit /etc/login.defs")
+    os.system("sudo gedit /etc/pam.d/common-password")
 
  
 def mp3finder(): # finds all mp3 files
