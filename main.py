@@ -15,7 +15,7 @@ if __name__ == '__main__':
         func.disablerootlogin()
     run = ""
 
-    print("Want to enforce password requirements? (extremely untested and dangerous) Y/N:")
+    print("Want to enforce password requirements? (slightly dangerous if you don't know what you're doing) (lots of manual input) Y/N:")
     run = input()
     if run.lower() == 'y':
         func.passwdenforcer()
